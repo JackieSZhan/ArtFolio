@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16
+    container_name: artfolio-db
+    environment:
+      POSTGRES_DB: artfolio
+      POSTGRES_USER: artfolio
+      POSTGRES_PASSWORD: artfolio
+    ports:
+      - "5432:5432"
+    volumes:
+      - artfolio_pgdata:/var/lib/postgresql/data
+
+volumes:
+  artfolio_pgdata:
