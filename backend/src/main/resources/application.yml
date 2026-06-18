@@ -11,6 +11,12 @@ spring:
     properties:
       hibernate:
         format_sql: true
-
+spaces:
+  endpoint: https://sfo3.digitaloceanspaces.com
+  region: sfo3
+  bucket: artfolio-assets
+  access-key: ${SPACES_ACCESS_KEY}
+  secret-key: ${SPACES_SECRET_KEY}
+  
 server:
   port: 8080
