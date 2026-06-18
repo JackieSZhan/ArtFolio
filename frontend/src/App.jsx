@@ -9,17 +9,20 @@ import './App.css';
 
 function App() {
   const [artistName, setArtistName] = useState('');
+  const [tagline, setTagline] = useState('');
 
   useEffect(() => {
-    // Fetch artist name for Navbar
     getMainPortfolio()
-      .then(res => setArtistName(res.data.artistName))
+      .then(res => {
+        setArtistName(res.data.artistName);
+        setTagline(res.data.bio);
+      })
       .catch(err => console.error(err));
   }, []);
 
   return (
     <BrowserRouter>
-      <Navbar artistName={artistName} />
+      <Navbar artistName={artistName} tagline={tagline} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />

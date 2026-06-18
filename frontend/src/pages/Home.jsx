@@ -7,7 +7,6 @@ function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Fetch portfolio with id 1 on page load
     getMainPortfolio()
       .then(res => setPortfolio(res.data))
       .catch(err => console.error(err))
@@ -19,19 +18,13 @@ function Home() {
 
   return (
     <div className="home">
-      <div className="home-hero">
-        {portfolio.heroImageUrl && (
-          <img
-            src={portfolio.heroImageUrl}
-            alt={portfolio.artistName}
-            className="hero-image"
-          />
-        )}
-      </div>
-      <div className="home-bio">
-        <h1>{portfolio.artistName}</h1>
-        <p>{portfolio.bio}</p>
-      </div>
+      {portfolio.heroImageUrl && (
+        <img
+          src={portfolio.heroImageUrl}
+          alt={portfolio.artistName}
+          className="hero-image"
+        />
+      )}
     </div>
   );
 }

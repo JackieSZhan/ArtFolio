@@ -1,32 +1,44 @@
 .navbar {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 2rem 4rem;
-  border-bottom: 1px solid #e8e8e8;
+  padding: 4rem 2rem 2rem;
+  text-align: center;
 }
 
-.navbar-name {
-  font-size: 1.2rem;
-  font-weight: 600;
+.artist-name {
+  font-family: var(--font-main);
+  font-size: 3.2rem;
+  font-weight: 400;
+  color: var(--color-ink);
   text-decoration: none;
-  color: #111;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
 }
 
-.navbar-links {
-  display: flex;
-  gap: 2.5rem;
+.artist-tagline {
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin: 1rem 0 3rem;
 }
 
 .navbar-links a {
   text-decoration: none;
-  color: #555;
-  font-size: 0.95rem;
-  letter-spacing: 0.05em;
+  color: var(--color-ink);
+  font-family: var(--font-main);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
   transition: color 0.2s;
 }
 
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+}
+
 .navbar-links a:hover {
-  color: #111;
+  color: var(--color-accent);
 }

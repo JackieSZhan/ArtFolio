@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-function Navbar({ artistName }) {
+function Navbar({ artistName, tagline }) {
   return (
     <nav className="navbar">
-      <Link to="/" className="navbar-name">{artistName}</Link>
+      <Link to="/" className="artist-name">{artistName}</Link>
+      {tagline && <p className="artist-tagline">{tagline}</p>}
       <div className="navbar-links">
         <Link to="/">About</Link>
         <Link to="/gallery">Gallery</Link>

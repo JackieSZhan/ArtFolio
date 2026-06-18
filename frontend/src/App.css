@@ -4,9 +4,18 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-bg: #FAF9F5;
+  --color-ink: #1C1B19;
+  --color-text-muted: #6E6B63;
+  --color-accent: #1FC2DB;
+  --color-border: #E5E2D9;
+  --font-main: 'Jost', sans-serif;
+}
+
 body {
-  font-family: 'Georgia', serif;
-  background-color: #fff;
-  color: #111;
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-ink);
   -webkit-font-smoothing: antialiased;
 }
