@@ -36,3 +36,25 @@ Content-Type: application/json
   "contactEmail": "xxx@xx.com",
   "heroImageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800"
 }
+
+### Create portfolio on production
+POST http://huan-zhao.com:8080/api/portfolios
+Content-Type: application/json
+
+{
+  "artistName": "Huan Zhao",
+  "bio": "The Cutiest Artist",
+  "contactEmail": "xxx@xx.com",
+  "heroImageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800"
+}
+
+### Upload image to Spaces
+POST http://localhost:8080/api/upload
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="test.jpg"
+Content-Type: image/jpeg
+
+< ./Users/jackiezhan/Downloads/Huan/drive-download-20251212T021340Z-1-001/Huan ZHAO_A Can of Sardine_Acrylic on Paper.jpg
+--boundary--
