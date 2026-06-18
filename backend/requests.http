@@ -23,7 +23,7 @@ Content-Type: application/json
   "artistName": "Huan Zhao",
   "bio": "The Cutiest Artist",
   "contactEmail": "xxx@xx.com",
-  "heroImageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800"
+  "heroImageUrl": "https://artfolio-assets.sfo3.cdn.digitaloceanspaces.com/IMG_0798.jpg"
 }
 
 ### Create portfolio on production
@@ -56,5 +56,30 @@ Content-Type: multipart/form-data; boundary=boundary
 Content-Disposition: form-data; name="file"; filename="test.jpg"
 Content-Type: image/jpeg
 
-< ./Users/jackiezhan/Downloads/Huan/drive-download-20251212T021340Z-1-001/Huan ZHAO_A Can of Sardine_Acrylic on Paper.jpg
+< /Users/jackiezhan/Downloads/Huan/drive-download-20251212T021340Z-1-001/Huan ZHAO_A Can of Sardine_Acrylic on Paper.jpg
 --boundary--
+
+### Update production hero image
+PUT https://huan-zhao.com/api/portfolios/1
+Content-Type: application/json
+
+{
+  "artistName": "Huan Zhao",
+  "bio": "The Cutiest Artist",
+  "contactEmail": "xxx@xx.com",
+  "heroImageUrl": "https://artfolio-assets.sfo3.cdn.digitaloceanspaces.com/Huan%20ZHAO_A%20Can%20of%20Sardine_Acrylic%20on%20Paper.jpg"
+}
+
+### Update local hero image
+PUT https://huan-zhao.com/api/portfolios/2
+Content-Type: application/json
+
+{
+  "artistName": "Huan Zhao",
+  "bio": "The Cutiest Artist",
+  "contactEmail": "xxx@xx.com",
+  "heroImageUrl": "https://artfolio-assets.sfo3.cdn.digitaloceanspaces.com/IMG_0798.jpg"
+}
+
+### Get all portfolios
+GET http://huan-zhao.com:8080/api/portfolios
