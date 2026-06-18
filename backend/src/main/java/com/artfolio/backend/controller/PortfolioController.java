@@ -35,4 +35,11 @@ public class PortfolioController {
     public ResponseEntity<List<PortfolioResponseDto>> getAll() {
         return ResponseEntity.ok(portfolioService.getAll());
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<PortfolioResponseDto> update(
+            @PathVariable Long id,
+            @Valid @RequestBody PortfolioRequestDto dto) {
+        return ResponseEntity.ok(portfolioService.update(id, dto));
+    }
 }

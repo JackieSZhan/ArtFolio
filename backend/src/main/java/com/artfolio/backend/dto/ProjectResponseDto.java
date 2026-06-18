@@ -12,4 +12,5 @@ public class ProjectResponseDto {
     private String category;
     private LocalDate createdDate;
     private List<AssetResponseDto> assets;
+    private int displayOrder;
 }

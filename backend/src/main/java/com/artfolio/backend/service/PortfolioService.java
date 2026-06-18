@@ -33,6 +33,22 @@ public class PortfolioService {
         return toResponseDto(saved);
     }
 
+    @Transactional
+    public PortfolioResponseDto update(Long id, PortfolioRequestDto dto) {
+        // Find existing portfolio, throw 404 if not found
+        Portfolio portfolio = portfolioRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Portfolio not found: " + id));
+
+        // Update fields
+        portfolio.setArtistName(dto.getArtistName());
+        portfolio.setBio(dto.getBio());
+        portfolio.setHeroImageUrl(dto.getHeroImageUrl());
+        portfolio.setContactEmail(dto.getContactEmail());
+
+        Portfolio saved = portfolioRepository.save(portfolio);
+        return toResponseDto(saved);
+    }
+
     @Transactional(readOnly = true)
     public PortfolioResponseDto getById(Long id) {
         Portfolio portfolio = portfolioRepository.findById(id)
@@ -69,6 +85,7 @@ public class PortfolioService {
         dto.setDescription(p.getDescription());
         dto.setCategory(p.getCategory());
         dto.setCreatedDate(p.getCreatedDate());
+        dto.setDisplayOrder(p.getDisplayOrder()); 
         dto.setAssets(p.getAssets().stream()
                 .map(this::toAssetDto)
                 .toList());
@@ -83,4 +100,6 @@ public class PortfolioService {
         dto.setSortOrder(a.getSortOrder());
         return dto;
     }
+
 }
+

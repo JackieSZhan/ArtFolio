@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6ffdaaa1-df4e-4ab5-9fb6-f5885499fedd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/artfolio/backend/controller/PortfolioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/artfolio/backend/controller/PortfolioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/artfolio/backend/dto/ProjectResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/artfolio/backend/dto/ProjectResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/artfolio/backend/entity/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/artfolio/backend/entity/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/artfolio/backend/repository/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/artfolio/backend/repository/ProjectRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/artfolio/backend/service/PortfolioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/artfolio/backend/service/PortfolioService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +38,9 @@
     &quot;url&quot;: &quot;https://github.com/JackieSZhan/ArtFolio.git&quot;,
     &quot;accountId&quot;: &quot;013b7f7c-fe9d-464a-9695-e9285298e98c&quot;
   }
+}</component>
+  <component name="HttpClientOnboardingState">{
+  &quot;isOnboardingCommentShown&quot;: true
 }</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -71,6 +79,7 @@
     &quot;Spring Boot.ArtFolioApplication.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jackiezhan/Projects/IDEA/ArtFolio&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -80,7 +89,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -98,6 +107,7 @@
     <attachedChunks>
       <set>
         <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.30387.90" />
       </set>
     </attachedChunks>
   </component>
@@ -116,6 +126,8 @@
       <workItem from="1769537392289" duration="15190000" />
       <workItem from="1773776862834" duration="12000" />
       <workItem from="1773776879125" duration="3313000" />
+      <workItem from="1781583686807" duration="27000" />
+      <workItem from="1781583727351" duration="2430000" />
     </task>
     <task id="LOCAL-00001" summary="Created artfolio Spring web project">
       <option name="closed" value="true" />

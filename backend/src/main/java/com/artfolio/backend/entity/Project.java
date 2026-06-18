@@ -30,6 +30,8 @@ public class Project {
 
     private LocalDate createdDate;
 
+    private int displayOrder;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "portfolio_id")
     private Portfolio portfolio;
