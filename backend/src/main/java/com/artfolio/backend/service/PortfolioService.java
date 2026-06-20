@@ -25,6 +25,7 @@ public class PortfolioService {
         Portfolio portfolio = Portfolio.builder()
                 .artistName(dto.getArtistName())
                 .bio(dto.getBio())
+                .biography(dto.getBiography())
                 .heroImageUrl(dto.getHeroImageUrl())
                 .contactEmail(dto.getContactEmail())
                 .build();
@@ -42,8 +43,10 @@ public class PortfolioService {
         // Update fields
         portfolio.setArtistName(dto.getArtistName());
         portfolio.setBio(dto.getBio());
+        portfolio.setBiography(dto.getBiography());
         portfolio.setHeroImageUrl(dto.getHeroImageUrl());
         portfolio.setContactEmail(dto.getContactEmail());
+        
 
         Portfolio saved = portfolioRepository.save(portfolio);
         return toResponseDto(saved);
@@ -70,6 +73,7 @@ public class PortfolioService {
         dto.setId(p.getId());
         dto.setArtistName(p.getArtistName());
         dto.setBio(p.getBio());
+        dto.setBiography(p.getBiography());
         dto.setHeroImageUrl(p.getHeroImageUrl());
         dto.setContactEmail(p.getContactEmail());
         dto.setProjects(p.getProjects().stream()

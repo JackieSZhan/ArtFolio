@@ -26,6 +26,9 @@ public class Portfolio {
     @Column(columnDefinition = "TEXT")
     private String bio;
 
+    @Column(columnDefinition = "TEXT")
+    private String biography;
+
     private String heroImageUrl;
 
     @Email

@@ -11,7 +11,7 @@ public class PortfolioRequestDto {
     private String artistName;
 
     private String bio;
-
+    private String biography;
     private String heroImageUrl;
 
     @Email
