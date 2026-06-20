@@ -104,6 +104,56 @@ Content-Type: application/json
   "artistName": "Huan Zhao",
   "bio": "The Cutiest Artist",
   "contactEmail": "xxx@xx.com",
-  "heroImageUrl": "https://artfolio-assets.sfo3.cdn.digitaloceanspaces.com/IMG_0798.jpg",
+  "heroImageUrl": "https://artfolio-assets.sfo3.cdn.digitaloceanspaces.com/Printmaking/Huan%20ZHAO_Dacia%20Gallery_Unnamed_01_Printmaking.jpg",
   "biography": "Huan Zhao is a Chinese-born, Canada-based multidisciplinary artist working at the intersection of ceramics, glass, and light. Having spent her late 20s in New York City, Huan, a recent immigrant to Canada, brings a cross-cultural perspective shaped by her training in both Eastern and Western craft traditions. Growing up trained in Chinese traditional painting and holding an MS in Information from the University of Michigan, she left a career in data science in 2023 to pursue art fully. She has studied at Penland School of Craft, Toledo Museum of Art, UrbanGlass, Pittsburgh Glass Center, Tulsa Glassblowing Center, Fleming College, Haliburton School of Art and Design, and continues to explore glass and ceramics in their functional and sculptural forms. She has participated in exhibitions and competitions, earning recognition for her unique work. She currently lives and works between Canada and China, continuing to build a practice rooted in craft, imagination, and transformation."
+}
+
+### Get all portfolios
+GET http://huan-zhao.com/api/portfolios
+
+### Add biography to production
+PUT https://huan-zhao.com/api/portfolios/2
+Content-Type: application/json
+
+{
+  "artistName": "Huan Zhao",
+  "bio": "The Cutiest Artist",
+  "contactEmail": "xxx@xx.com",
+  "heroImageUrl": "https://artfolio-assets.sfo3.cdn.digitaloceanspaces.com/Printmaking/Huan%20ZHAO_Dacia%20Gallery_Unnamed_01_Printmaking.jpg",
+  "biography": "Huan Zhao is a Chinese-born, Canada-based multidisciplinary artist working at the intersection of ceramics, glass, and light. Having spent her late 20s in New York City, Huan, a recent immigrant to Canada, brings a cross-cultural perspective shaped by her training in both Eastern and Western craft traditions. Growing up trained in Chinese traditional painting and holding an MS in Information from the University of Michigan, she left a career in data science in 2023 to pursue art fully. She has studied at Penland School of Craft, Toledo Museum of Art, UrbanGlass, Pittsburgh Glass Center, Tulsa Glassblowing Center, Fleming College, Haliburton School of Art and Design, and continues to explore glass and ceramics in their functional and sculptural forms. She has participated in exhibitions and competitions, earning recognition for her unique work. She currently lives and works between Canada and China, continuing to build a practice rooted in craft, imagination, and transformation."
+}
+
+### Create a Glass project
+POST http://localhost:8080/api/projects
+Content-Type: application/json
+
+{
+  "title": "Test Glass Piece",
+  "category": "Glass",
+  "description": "A test piece",
+  "displayOrder": 1,
+  "portfolioId": 3
+}
+
+### Create a Ceramics project
+POST http://localhost:8080/api/projects
+Content-Type: application/json
+
+{
+  "title": "Test Ceramic Bowl",
+  "category": "Ceramics",
+  "description": "A test piece",
+  "displayOrder": 1,
+  "portfolioId": 3
+}
+
+### Add an image to the Glass project (id=1)
+POST http://localhost:8080/api/assets
+Content-Type: application/json
+
+{
+  "imageUrl": "https://artfolio-assets.sfo3.cdn.digitaloceanspaces.com/Glass/Huan%20ZHAO_Dacia%20Gallery_7_Glass.jpg",
+  "caption": "Glass piece",
+  "sortOrder": 1,
+  "projectId": 1
 }
