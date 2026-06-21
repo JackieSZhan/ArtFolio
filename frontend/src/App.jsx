@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
+import HappyBirthday from './pages/HappyBirthday';
 import './App.css';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path='/happy-birthday' element={<HappyBirthday />} />
       </Routes>
       <Footer contactEmail={contactEmail} />
     </BrowserRouter>
