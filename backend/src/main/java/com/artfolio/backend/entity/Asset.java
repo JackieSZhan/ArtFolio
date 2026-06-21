@@ -23,6 +23,8 @@ public class Asset {
 
     private int sortOrder;
 
+    private String focalPoint;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "project_id")
     private Project project;

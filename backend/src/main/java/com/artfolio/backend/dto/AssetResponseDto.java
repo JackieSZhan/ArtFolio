@@ -8,4 +8,5 @@ public class AssetResponseDto {
     private String imageUrl;
     private String caption;
     private int sortOrder;
+    private String focalPoint;
 }

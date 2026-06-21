@@ -14,4 +14,6 @@ public class AssetRequestDto {
     private int sortOrder;
 
     private Long projectId;
+
+    private String focalPoint;
 }

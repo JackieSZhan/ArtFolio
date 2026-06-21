@@ -102,6 +102,7 @@ public class PortfolioService {
         dto.setImageUrl(a.getImageUrl());
         dto.setCaption(a.getCaption());
         dto.setSortOrder(a.getSortOrder());
+        dto.setFocalPoint(a.getFocalPoint());
         return dto;
     }
 

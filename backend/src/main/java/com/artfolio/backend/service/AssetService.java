@@ -27,6 +27,7 @@ public class AssetService {
                 .caption(dto.getCaption())
                 .sortOrder(dto.getSortOrder())
                 .project(project)
+                .focalPoint(dto.getFocalPoint())
                 .build();
 
         return assetRepository.save(asset);

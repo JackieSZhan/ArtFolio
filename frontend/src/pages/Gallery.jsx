@@ -55,6 +55,7 @@ function Gallery() {
                       src={cover.imageUrl}
                       alt={project.title}
                       className="work-image"
+                      style={{ objectPosition: cover.focalPoint || 'center' }}
                     />
                   )}
                   <p className="work-title">{project.title}</p>
